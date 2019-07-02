@@ -21,6 +21,7 @@ test('result of substract',()=>{
     expect(one.substract(12,11)).toBe(1);
 });
 
+
 /* const functionName=require('path');
 test('description', ()=>{
     expect(functionName(param1,param2)).toBe(result);
