@@ -1,8 +1,5 @@
 class MathOperations{
 
-
-
-
     add(a,b){
     return a+b;}
     

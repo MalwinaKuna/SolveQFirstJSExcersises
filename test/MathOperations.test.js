@@ -17,3 +17,4 @@ test('result',()=>{
     let m=new MathOperations();
     expect(m.divide(8,4)).toBe(2);
 })
+
