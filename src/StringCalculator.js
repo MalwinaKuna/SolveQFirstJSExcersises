@@ -14,7 +14,6 @@ class StringCalculator{
         for(let i =0; i<tab.length;i++){
             sum+=parseInt(tab[i]);
           
-          
         }
     
       return sum;
