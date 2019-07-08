@@ -1,0 +1,29 @@
+const Greeter3= require('../src/Greeter3');
+
+//  test('description', ()=>{
+   
+//      let obj= new Greeter3();
+//      expect(obj.greeter('kuna')).toBe('Hello Kuna');
+  
+//  })
+
+test('greet in the morning', ()=>{
+    let morning= new Date(1970,1,1,6,0);
+    let morningGreed= new Greeter3(morning);
+
+    expect(morningGreed.greeter('kuna')).toBe('Good morning Kuna');
+})
+
+ test('greet in the evening', ()=>{
+     let evening= new Date(1970,1,1,18,1);
+     let eveningGreet= new Greeter3(evening);
+
+     expect(eveningGreet.greeter('kuna')).toBe('Good evening Kuna');
+
+ })
+
+ test('greet at night', ()=>{
+     let night= new Date(1970,1,1,22);
+     let greetNight= new Greeter3(night);
+     expect(greetNight.greeter('kuna')).toBe('Good night Kuna');
+ })

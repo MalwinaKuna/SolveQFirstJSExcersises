@@ -2,7 +2,7 @@ class Greeter {
     
  
     greet(name,time) {
-      //  name.trim();
+       name.trim();
         name=name.charAt(0).toUpperCase()+ name.slice(1);
         if(time<=12 && time >=6){
              let  greets = 'Good morning ' + name;
