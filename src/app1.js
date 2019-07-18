@@ -17,25 +17,55 @@ app.post('/user', (req, res) => {
   })
 
 })
-
 //------> ERRORS
 app.post('/numbers', (req, res) => {
   let a = req.body.a;
   let b = req.body.b;
-  
-  if (isNaN(a) || isNaN(b)) {
-    res.status(400);
-    //res.send('');   
-    res.json({
-      error: "a i bbbe jest bardzo złe"
-    })
+  let c = req.body.c;
 
+  let errors = [];
+  if (isNaN(a)) {
+      errors.push("a jest złe")
+  } 
+  if (isNaN(b)) {
+      errors.push("be jest złe")
+  } 
+  if (isNaN(c)) {
+    errors.push("c jest złe")
+} 
+  if (errors.length>0) {
+    res.status(400);
+    res.json({ error: errors   })
   }
+
+
+  // if (isNaN(a) && isNaN(b)) {
+  //   res.status(400);
+  //   //res.send('');   
+  //   res.json({
+  //     error: "a i be jest bardzo złe"
+  //   })
+
+  // } else 
+  // if (isNaN(a) || isNaN(b)) {
+  //   res.status(400);
+  //   if (isNaN(a)) {
+  //     res.json({
+  //       error: "a jest złe"
+  //     })
+  //   } else {
+  //     res.json({
+  //       error: "be jest złe"
+  //     })
+  //   }
+  // }
+
+
+
   res.header('Content-Type', 'application/json; charset=utf-8')
   res.json({
-    sum: parseInt(req.body.a) + parseInt(req.body.b)
+    sum: parseInt(req.body.a) + parseInt(req.body.b) + parseInt(req.body.c)
   })
-
 })
 //   app.put('/user', function (req, res) {
 //     res.send('Got a PUT request at /user')
@@ -55,24 +85,3 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 
 
-
-/*//------> ERRORS
-app.post('/numbers', (req, res) => {
-  let a = req.body.a;
-  let b = req.body.b;
-  
-  if (isNaN(a) && isNaN(b)) {
-    res.status(400);
-    // res.send('');
-    res.json({
-      error: "a i bbbe jest bardzo złe"
-    })
-  } else if ((isNaN(a) || isNaN(b))) {
-    const errors= [];
-    if(isNaN(a)){
-      errors.push(res.json({
-        error: "a jest bardzo złe"
-      }))
-
-    }
-  }*/
