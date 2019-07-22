@@ -1,20 +1,20 @@
 const express = require('express');
 const app = express();
-const port=3000;
-var bodyParser= require('body-parser');
+const port = 3000;
+var bodyParser = require('body-parser');
 app.use(bodyParser.json())
- app.get('/', (req,res)=>{
-     res.send('It works!');})
-
- app.post('/user', (req,res)=>{
+app.get('/', (req, res) => {
+    res.send('It works!');
+})
+app.post('/user', (req, res) => {
     // res.json({
     //     'status': 'sukces!'   
     // })
-     res.send(req.body.status)
- })
-    
-
- app.listen(port,()=>{console.log(`Listening!`);})
+    res.send(req.body.status)
+})
+app.listen(port, () => {
+    console.log(`Listening!`);
+})
 
 
 

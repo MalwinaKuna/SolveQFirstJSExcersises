@@ -1,27 +1,20 @@
 class StringCalculator {
-
-    add(number){
-
-        if(number.includes('-')) {
+    add(number) {
+        if (number.includes('-')) {
             return 'negatives not allowed';
         }
-       
-        if(number === ('')) {
+        if (number === ('')) {
             return 0;
         }
-
-       const array=  number.split(/[,\n]/);
-        let sum=0;
-
-        for ( let i = 0; i < array.length; i++) {
-            sum+= parseInt(array[i]);
+        const array = number.split(/[,\n]/);
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum += parseInt(array[i]);
         }
-
         return sum;
-
     }
 }
-module.exports= StringCalculator;
+module.exports = StringCalculator;
 
 // class StringCalculator {
 

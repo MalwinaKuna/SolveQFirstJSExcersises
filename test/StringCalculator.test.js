@@ -1,9 +1,7 @@
-const StringCalculator= require('../src/StringCalculator');
-
+const StringCalculator = require('../src/StringCalculator');
 test('description', () => {
-    let obj= new StringCalculator();
-    expect(obj.add('1')).toBe(1); 
-
+    let obj = new StringCalculator();
+    expect(obj.add('1')).toBe(1);
 })
 
 

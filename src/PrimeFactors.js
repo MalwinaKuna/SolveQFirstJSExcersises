@@ -1,23 +1,20 @@
 class PrimeFactors {
-    generate(number){
-        const array=[];
-
-        while(number >1){
-            let divide=2;
-
-            while(divide<=number){
-                while(0 === number % divide) {
+    generate(number) {
+        const array = [];
+        while (number > 1) {
+            let divide = 2;
+            while (divide <= number) {
+                while (0 === number % divide) {
                     array.push(divide);
                     number /= divide;
-
                 }
             }
             divide++;
         }
-    return array;}
-
+        return array;
+    }
 }
-module.exports=PrimeFactors;
+module.exports = PrimeFactors;
 
 
 
